@@ -1,0 +1,8 @@
+
+{
+  "name": "Projecto da TOSSE",
+  "description": "Sistema inteligente de análise acústica para auxílio no diagnóstico de patologias respiratórias através do som da tosse.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
