@@ -1,20 +1,56 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+🩺 Projecto TOSSE - Diagnóstico Respiratório por IA
+Este projeto, desenvolvido para a cadeira de Engenharia do Conhecimento (5º Ano), utiliza Inteligência Artificial para analisar amostras acústicas de tosse e auxiliar na identificação de patologias respiratórias.
 
-# Run and deploy your AI Studio app
+📋 Funcionalidades (Fluxo de 5 Telas)
+Boas-Vindas: Introdução ao sistema de diagnóstico.
 
-This contains everything you need to run your app locally.
+Cadastro do Utente: Recolha de dados demográficos e consentimento ético.
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+Gravação da Tosse: Captura de áudio em tempo real (16kHz, Mono).
 
-## Run Locally
+Análise por IA: Classificação instantânea com scores de confiança.
 
-**Prerequisites:**  Node.js
+Relatório PDF: Geração de laudo detalhado para partilha médica.
 
+🚀 Tecnologias e Arquitetura
+O sistema foi projetado para correr localmente no dispositivo (Edge Computing), garantindo a privacidade do utente.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Processamento de Sinal
+Frequência: 16kHz (padrão clínico).
+
+Filtros: Aplicação de filtros Wiener e Butterworth para redução de ruído ambiente.
+
+Features: Extração de coeficientes MFCC e Espectrogramas Log-Mel.
+
+2. Inteligência Artificial (Antigravity/TFLite)
+Modelo: Rede Neural Convolucional (CNN) baseada em MobileNetV2.
+
+Classes de Diagnóstico:
+
+Pneumonia
+
+Bronquite
+
+Asma
+
+Normal (Sem patologia aparente)
+
+📂 Estrutura do Repositório
+/lib: Interface construída no Stitch UI.
+
+/assets: Modelo de IA (.tflite) e pesos.
+
+/scripts: Processamento de áudio e lógica de PDF.
+
+⚖️ Aviso Legal
+Este software é uma ferramenta de auxílio à decisão e não substitui o diagnóstico de um profissional de saúde qualificado.
+
+Como usar este README no GitHub:
+
+Vá à página do seu repositório: https://github.com/Emanuel083/projeto-da-tosse-Emanuel.
+
+Clique em "Add file" -> "Create new file".
+
+Dê o nome de README.md.
+
+Cole o texto acima e clique em "Commit changes".
